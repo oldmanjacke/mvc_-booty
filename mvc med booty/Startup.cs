@@ -56,6 +56,12 @@ namespace mvc_med_booty
                     pattern:"Fevercheck",
                     defaults: new {Controller ="Fever", Action = "Index"}
                     );
+
+                endpoints.MapControllerRoute(
+                    name: "GuessingGame",
+                    pattern: "GuessingGame",
+                    defaults: new { Controller = "Guessing", Action = "Index" }
+                     );
                 endpoints.MapRazorPages();
             });
         }
