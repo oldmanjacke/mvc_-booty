@@ -41,7 +41,9 @@ namespace mvc_med_booty
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+            app.UseSession();
 
             app.UseRouting();
 
@@ -49,6 +51,11 @@ namespace mvc_med_booty
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name:"Fevercheck",
+                    pattern:"Fevercheck",
+                    defaults: new {Controller ="Fever", Action = "Index"}
+                    );
                 endpoints.MapRazorPages();
             });
         }

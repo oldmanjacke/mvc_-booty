@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@if (ViewBag.Msg != null)
+{
+    <h3>@ViewBag.Msg</h3>
+}
+
+else
+{
+    <h3>Session is empty</h3>
+}
+
+<form asp-action="Index" asp-controller="Guessing" method="post">
+    <input type="text" name="myGuess" value="" placeholder="Type a guess" />
+
+    <span>@ViewBag.Msg</span>
+
+    <input type="submit" value="Save" />
+
+</form>
