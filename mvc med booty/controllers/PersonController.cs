@@ -8,24 +8,29 @@ namespace mvc_med_booty.controllers
 {
     public class PersonController : Controller
     {
-        private readonly IPeopleService _peopleService;
+        ////private readonly IPeopleService _peopleService;
 
-        public PersonController(IPeopleService peopleService)
-        {
-            _peopleService = peopleService;
-        }
+        ////public PersonController(IPeopleService peopleService)
+        ////{
+        ////    _peopleService = peopleService;
+        ////}
 
-        public IActionResult Index()
-        {
-            return View(_peopleService.GetPeople());
-        }
+        //public IActionResult Index()
+        //{
+        //    return View(_peopleService.GetPeople());
+        //}
 
         public IActionResult Details(int id)
         {
-
+           
+            return View();
         }
 
         public IActionResult Create()
+        {
+            return View();
+        }
+        public IActionResult Test()
         {
             return View();
         }
