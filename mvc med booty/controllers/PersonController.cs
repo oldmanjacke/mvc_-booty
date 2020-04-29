@@ -30,9 +30,11 @@ namespace mvc_med_booty.controllers
         {
             return View();
         }
-        public IActionResult Test()
+        public IActionResult Edit()
         {
             return View();
         }
+
+        
     }
 }
