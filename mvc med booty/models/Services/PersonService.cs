@@ -7,9 +7,9 @@ namespace mvc_med_booty.models.Services
 {
     public class PersonService : IPeopleService
     {
-        private readonly IDrinksRepo _personsRepo;
+        private readonly IPeopleRepo _personsRepo;
 
-        public DrinksService(IDrinksRepo personsRepo)
+        public PersonService(IPeopleRepo personsRepo)
         {
             _personsRepo = personsRepo;
         }

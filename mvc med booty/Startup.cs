@@ -60,6 +60,12 @@ namespace mvc_med_booty
                     pattern: "GuessingGame",
                     defaults: new { Controller = "Guessing", Action = "Index" }
                      );
+
+                endpoints.MapControllerRoute(
+                    name:"Person",
+                    pattern:"Person",
+                    defaults: new {controllers ="Person", Action ="Index"}
+                    );
                 endpoints.MapRazorPages();
             });
         }
