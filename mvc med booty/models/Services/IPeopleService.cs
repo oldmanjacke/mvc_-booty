@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace mvc_med_booty.models.Services
 {
-    public class IPeopleService
+    public interface IPeopleService
     {
 
         People Create(PersonViewModel drink);

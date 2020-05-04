@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using mvc_med_booty.models;
+using mvc_med_booty.models.Services;
 
 namespace mvc_med_booty.controllers
 {
@@ -18,7 +19,7 @@ namespace mvc_med_booty.controllers
 
         public IActionResult Index()
         {
-            return View(_peopleService.GetPeople());
+            return View(_peopleService.GetPerson());
         }
 
         public IActionResult Details(int id)
