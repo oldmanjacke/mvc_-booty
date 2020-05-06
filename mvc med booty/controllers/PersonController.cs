@@ -53,11 +53,43 @@ namespace mvc_med_booty.controllers
             }
         }
 
-        public IActionResult Edit()
+        public IActionResult Edit(int id)
         {
-            return View();
+            PersonViewModel person = new PersonViewModel(_peopleService.FindById(id));
+            if (person == null)
+            {
+                return RedirectToAction("Index");
+            }
+            ViewBag.PersonId = id;
+            return View(person);
         }
 
-        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, PersonViewModel person)
+        {
+
+            if (ModelState.IsValid)
+            {
+                _peopleService.Update(id, person);
+
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                ViewBag.PersonId = id;
+                return View(person);
+            }
+
+        }
+
+        public ActionResult Delete(int id)
+        {
+
+            _peopleService.Remove(id);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
