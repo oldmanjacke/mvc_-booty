@@ -1,0 +1,29 @@
+﻿
+@model List<mvc_med_booty.models.People>
+
+@{
+    ViewData["Title"] = "SPA";
+}
+
+<h1>SPA</h1>
+
+<div class="row">
+    <div class="col-12">
+
+        <input id="personName" name="Name" type="text" value="" />
+        <input id="personAge" name="Age" type="number" value="" />
+        <input id="personAdress" name="Adress" type="checkbox" value="" />
+        <input id="personCity" name="City" type="checkbox" value="" />
+
+        <button class="btn btn-success" onclick="createPerson()">Create</button>
+    </div>
+</div>
+
+<div class=" row">
+    <div id="personList" class="col-12">
+        @foreach (var item in Model)
+        {
+            <partial name="_personPartial" model="item" />
+        }
+    </div>
+</div>
