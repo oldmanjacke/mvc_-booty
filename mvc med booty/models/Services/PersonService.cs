@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using mvc_med_booty.models.Repository;
 
 namespace mvc_med_booty.models.Services
 {
@@ -24,7 +25,7 @@ namespace mvc_med_booty.models.Services
             return _personsRepo.FindById(id);
         }
 
-        public List<People> GetDrinks()
+        public List<People> GetPerson()
         {
             return _personsRepo.All();
         }
