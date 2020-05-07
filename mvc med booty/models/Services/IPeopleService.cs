@@ -8,7 +8,7 @@ namespace mvc_med_booty.models.Services
     public interface IPeopleService
     {
 
-        People Create(PersonViewModel drink);
+        People Create(PersonViewModel person);
         People FindById(int id);
         bool Update(int id, PersonViewModel personViewModel);
         bool Remove(int id);
