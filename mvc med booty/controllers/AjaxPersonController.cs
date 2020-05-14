@@ -20,7 +20,7 @@ namespace mvc_med_booty.controllers
 
         public IActionResult SPA()
         {
-            return View(_personService.GetPeople());
+            return View(_personService.GetPerson());
         }
 
         // GET
