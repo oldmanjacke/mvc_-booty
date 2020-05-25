@@ -79,6 +79,7 @@ namespace mvc_med_booty
                     pattern:"Person",
                     defaults: new {controllers ="Person", Action ="Index"}
                     );
+                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
